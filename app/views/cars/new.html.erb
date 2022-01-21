@@ -1,14 +1,10 @@
 <h1>Cars</h1>
 
 <h3>Register a Car</h3>
-<%= form_with model: @car do |form| %>
+<%= form_with model: @cars do |form| %>
   <%= form.text_field :name, placeholder: "name" %>
   <%= form.text_field :year, placeholder: "year" %>
   <%= form.submit %>
 <% end %>
 
-<!-- <%= form_for @car do |form| %>
-  <%= form.text_field :name, placeholder: 'name' %>
-  <%= form.text_field :year, placeholder: 'year' %>
-  <%= form.submit %>
-<% end %> -->
+
