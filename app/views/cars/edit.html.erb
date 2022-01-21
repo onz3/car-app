@@ -1,2 +1,7 @@
-<h1>Cars#edit</h1>
-<p>Find me in app/views/cars/edit.html.erb</p>
+<h1>Cars</h1>
+<h3>Update Car Details</h3>
+<%= form_with model: @car do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :year, placeholder: "year" %>
+  <%= form.submit %>
+<% end %>
