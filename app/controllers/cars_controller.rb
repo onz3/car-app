@@ -44,4 +44,8 @@ class CarsController < ApplicationController
     params.require(:car).permit(:name, :year)
   end
 
+  def current_car
+    @cars = Car.find(params[:id])
+  end
+
 end

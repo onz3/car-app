@@ -1,18 +1,10 @@
-
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Car List</a>
-    </div>
-  </nav>
-</div>
-<div class="container">
+<h3>Cars</h3>
 <ul>
   <% @cars.each do |car| %>
     <li><%= link_to car.name, car_path(car)  %></li>
   <% end %>
 </ul>
-</div>
+
 
 <table>
   <% @cars.each do |car| %>
