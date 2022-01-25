@@ -1,12 +1,15 @@
-<h3>Cars</h3>
-<ul>
-  <% @cars.each do |car| %>
-    <li><%= link_to car.name, car_path(car)  %></li>
-  <% end %>
-</ul>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Cars</span>
+  </div>
+</nav>
 
 
-<table>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">List</h5>
+    <table>
   <% @cars.each do |car| %>
     <tr>
       <td><%= link_to car.name, car_path(car) %></td>
@@ -14,4 +17,7 @@
       <td><%= button_to 'Remove', car_path(car), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
   <% end %>
 </table>
-<%= link_to "Add a New CAR", new_car_path %>
+  </div>
+</div>
+
+<button class="btn btn-light"><%= link_to "Add a New CAR", new_car_path %></button>
